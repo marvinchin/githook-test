@@ -45,7 +45,9 @@ function postReleaseDraft (commitLog) {
   });
 }
 
-getChangeCommits()
-.then(postReleaseDraft)
-.then((res) => console.log(res))
-.catch((err) => console.log(err));
+const { TRAVIS_EVENT_TYPE, TRAVIS_BRANCH } = process.env;
+if ( TRAVIS_EVENT_TYPE == "push" && TRAVIS_BRANCH == "master") {
+  getChangeCommits()
+  .then(postReleaseDraft)
+  .catch((err) => console.log(err));
+}
