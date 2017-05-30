@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - "6"
-before_script:
-  - echo $TRAVIS_COMMIT
+after_success:
+  - echo $TRAVIS_BARNCH
   - echo $TRAVIS_EVENT_TYPE
-  - echo $TRAVIS_COMMIT_RANGE
-  - echo $TRAVIS_BRANCH
-  - git log $TRAVIS_COMMIT_RANGE
-  - node generate_change.js
+  - 'if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_EVENT_TYPE" = "push"]]; then
+      node generate_change.js;
+    fi'
