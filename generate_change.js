@@ -4,7 +4,6 @@ const exec = require("child_process").exec;
 function getChangeCommits() {
   return new Promise((resolve, reject) => {
     const { TRAVIS_COMMIT_RANGE } = process.env;
-    const TRAVIS_COMMIT_RANGE = "e099b99...539bc6fe157e";
     // Prefixed with * to for markdown list
     const command = `git log --pretty="format:* %s [%h by %cn]" ${TRAVIS_COMMIT_RANGE}`;
     exec(command, (error, stdout, stderr) => {
