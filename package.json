@@ -1,0 +1,23 @@
+{
+  "name": "githook-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate_change.js",
+  "dependencies": {
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvinchin/githook-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marvinchin/githook-test/issues"
+  },
+  "homepage": "https://github.com/marvinchin/githook-test#readme"
+}
