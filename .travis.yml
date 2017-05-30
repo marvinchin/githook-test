@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "iojs"
+  - "6"
+
+before_script:
+  - echo TRAVIS_COMMIT
+  - echo $TRAVIS_COMMIT
+  - echo TRAVIS_EVENT_TYPE
+  - echo $TRAVIS_EVENT_TYPE
+  - echo TRAVIS_COMMIT_RANGE
+  - echo $TRAVIS_COMMIT_RANGE
+  - echo TRAVIS_BRANCH
+  - echo $TRAVIS_BRANCH
