@@ -7,3 +7,4 @@ before_script:
   - echo $TRAVIS_COMMIT_RANGE
   - echo $TRAVIS_BRANCH
   - git log $TRAVIS_COMMIT_RANGE
+  - node generate_change.js
