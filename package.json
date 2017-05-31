@@ -4,6 +4,7 @@
   "description": "",
   "main": "generate_change.js",
   "dependencies": {
+    "github-api": "^3.0.0",
     "superagent": "^3.5.2"
   },
   "devDependencies": {},
